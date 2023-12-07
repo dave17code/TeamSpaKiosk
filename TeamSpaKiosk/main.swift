@@ -1,4 +1,3 @@
-//
 //  main.swift
 //  TeamSpaKiosk
 //
@@ -7,45 +6,78 @@
 
 import Foundation
 
-var currentMenu = Menu().name
+var currentScreen = MenuCategory().name
 
-Menu().menuPrint()
+MenuCategory().menuPrint()
 
-func selectMenu() {
-    let select = readLine()!
+func kioskStart() {
     
-    // 처음 메뉴 선정 
-    if currentMenu == "Menu" {
-        
-        switch select {
+    let selectNumber = readLine()!
+    
+    // 메뉴 카테고리 선택
+    if currentScreen == "MenuCategory" {
+                    
+        switch selectNumber {
         case "1":
-            currentMenu = Burgers().name
+            currentScreen = Burgers().name
             Burgers().menuPrint()
         case "2":
-            currentMenu = Drinks().name
+            currentScreen = Drinks().name
             Drinks().menuPrint()
-        
         default:
             print("잘못된 번호를 입력했어요. 다시 입력해주세요.")
         }
     }
     
-    // 상세 메뉴 선정
-    if currentMenu != "Menu" {
+    // 버거 메뉴 선택
+    if currentScreen == "Burgers" {
         
-        switch select {
+        let selectNumber = readLine()!
+        
+        switch selectNumber {
         case "1":
-            currentMenu = Burgers().name
-            Burgers().menuPrint()
+            print(Burgers().menu[0].dropFirst(3))
         case "2":
-            currentMenu = Drinks().name
-            Drinks().menuPrint()
-        
+            print(Burgers().menu[1].dropFirst(3))
+        case "3":
+            print(Burgers().menu[2].dropFirst(3))
+        case "4":
+            print(Burgers().menu[3].dropFirst(3))
+        case "0":
+            currentScreen = MenuCategory().name
+            MenuCategory().menuPrint()
         default:
             print("잘못된 번호를 입력했어요. 다시 입력해주세요.")
         }
     }
+    
+    // 드링크 메뉴 선택
+    if currentScreen == "Drinks" {
+        
+        let selectNumber = readLine()!
+        
+        switch selectNumber {
+        case "1":
+            print(Drinks().menu[0].dropFirst(3))
+        case "2":
+            print(Drinks().menu[1].dropFirst(3))
+        case "3":
+            print(Drinks().menu[2].dropFirst(3))
+        case "4":
+            print(Drinks().menu[3].dropFirst(3))
+        case "0":
+            currentScreen = MenuCategory().name
+            MenuCategory().menuPrint()
+        default:
+            print("잘못된 번호를 입력했어요. 다시 입력해주세요.")
+        }
+    }
+    
+    kioskStart()
 }
+
+kioskStart()
+
     
     
 
