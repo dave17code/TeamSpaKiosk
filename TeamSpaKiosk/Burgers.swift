@@ -18,7 +18,7 @@ struct Burgers {
                 "0. 뒤로가기"
     ]
     
-    let menuPrice = ["6.9", "8.9", "9.4", "6.9"]
+    let menuPrice: [Double] = [6.9, 8.9, 9.4, 6.9]
     
     func menuPrint() {
         print("[ Burgers MENU ]")

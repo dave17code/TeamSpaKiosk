@@ -8,6 +8,7 @@
 import Foundation
 
 struct MenuCategory {
+    
     var name = "MenuCategory"
     
     let menu = ["1. Burgers         | 앵거스 비프 통살을 다져 만든 버거",

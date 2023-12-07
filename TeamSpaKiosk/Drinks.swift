@@ -17,7 +17,7 @@ struct Drinks {
                 "4. Abita Root Beer    | W 4.8 | 청량감 있는 독특한 미국식 무알콜 탄산음료",
                 "0. 뒤로가기"]
     
-    let menuPrice = ["4.3", "3.5", "2.9", "4.8"]
+    let menuPrice: [Double] = [4.3, 3.5, 2.9, 4.8]
     
     func menuPrint() {
         print("[ Drinks MENU ]")

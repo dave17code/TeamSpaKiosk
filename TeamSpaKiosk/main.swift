@@ -7,26 +7,64 @@
 import Foundation
 
 var currentScreen = MenuCategory().name
+var orders = Orders()
 
-//MenuCategory().menuPrint()
-
-func kioskStart() {
+func showMenuCategory() -> Void {
     
     // 메뉴 카테고리 선택
     if currentScreen == "MenuCategory" {
                     
         MenuCategory().menuPrint()
-        let selectNumber = readLine()!
+        
+        print("오더리스트 개수 \(orders.orderList.count)")
+        
+        // 장바구니에 메뉴 비어있음
+        if orders.orderList.isEmpty {
+            
+            let selectNumber = readLine()!
+            
+            switch selectNumber {
+            case "1":
+                print("")
+                currentScreen = Burgers().name
+            case "2":
+                print("")
+                currentScreen = Drinks().name
+            default:
+                print("잘못된 번호를 입력했어요. 다시 입력해주세요.")
+            }
+        }
+        
+        // 장바구니에 메뉴 들어있음
+        if orders.orderList.isEmpty == false {
+        
+            print("")
+            print("[ ORDER MENU ]")
+            print("5. Order         | 장바구니를 확인 후 주문합니다.")
+            print("6. Cancel        | 진행중인 주문을 취소합니다.")
+            
+            let selectNumber = readLine()!
 
-        switch selectNumber {
-        case "1":
-            print("")
-            currentScreen = Burgers().name
-        case "2":
-            print("")
-            currentScreen = Drinks().name
-        default:
-            print("잘못된 번호를 입력했어요. 다시 입력해주세요.")
+            switch selectNumber {
+            case "1":
+                print("")
+                currentScreen = Burgers().name
+            case "2":
+                print("")
+                currentScreen = Drinks().name
+            case "5":
+                currentScreen = orders.name
+                print(orders.orderPrint())
+            case "6":
+                // 진행 중인 주문 취소: 장바구니 비우기
+                orders.orderList.removeAll()
+                orders.orderPrice.removeAll()
+                print("")
+                print("진행 중인 주문을 취소했습니다.")
+                print("")
+            default:
+                print("잘못된 번호를 입력했어요. 다시 입력해주세요.")
+            }
         }
     }
     
@@ -52,6 +90,8 @@ func kioskStart() {
             print("")
             print("장바구니에 추가 되었습니다.")
             print("")
+            orders.orderList.append(Burgers().menu[0])
+            orders.orderPrice.append(Burgers().menuPrice[0])
             currentScreen = MenuCategory().name
             case "2":
             print("")
@@ -97,10 +137,12 @@ func kioskStart() {
         }
     }
     
-    kioskStart()
+    // 장바구니 주문 창이 아닐 때에만 showMenuCategory() 재귀 호출
+    if currentScreen != "orders" {
+        showMenuCategory()
+    }
 }
 
-kioskStart()
 
     
     

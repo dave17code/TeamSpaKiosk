@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4EC1D3902B2170C2003463F7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1D38F2B2170C2003463F7 /* main.swift */; };
-		4EC1D3982B218942003463F7 /* MainCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1D3972B218942003463F7 /* MainCategory.swift */; };
+		4EC1D3982B218942003463F7 /* MenuCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1D3972B218942003463F7 /* MenuCategory.swift */; };
 		4EC1D39A2B21948C003463F7 /* Burgers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1D3992B21948C003463F7 /* Burgers.swift */; };
 		4EC1D39C2B21965C003463F7 /* Drinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1D39B2B21965C003463F7 /* Drinks.swift */; };
+		4EC1D39E2B222189003463F7 /* Orders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1D39D2B222189003463F7 /* Orders.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,9 +29,10 @@
 /* Begin PBXFileReference section */
 		4EC1D38C2B2170C2003463F7 /* TeamSpaKiosk */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TeamSpaKiosk; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC1D38F2B2170C2003463F7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		4EC1D3972B218942003463F7 /* MainCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCategory.swift; sourceTree = "<group>"; };
+		4EC1D3972B218942003463F7 /* MenuCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCategory.swift; sourceTree = "<group>"; };
 		4EC1D3992B21948C003463F7 /* Burgers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Burgers.swift; sourceTree = "<group>"; };
 		4EC1D39B2B21965C003463F7 /* Drinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drinks.swift; sourceTree = "<group>"; };
+		4EC1D39D2B222189003463F7 /* Orders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orders.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +66,10 @@
 			isa = PBXGroup;
 			children = (
 				4EC1D38F2B2170C2003463F7 /* main.swift */,
-				4EC1D3972B218942003463F7 /* MainCategory.swift */,
+				4EC1D3972B218942003463F7 /* MenuCategory.swift */,
 				4EC1D3992B21948C003463F7 /* Burgers.swift */,
 				4EC1D39B2B21965C003463F7 /* Drinks.swift */,
+				4EC1D39D2B222189003463F7 /* Orders.swift */,
 			);
 			path = TeamSpaKiosk;
 			sourceTree = "<group>";
@@ -132,7 +135,8 @@
 				4EC1D39A2B21948C003463F7 /* Burgers.swift in Sources */,
 				4EC1D39C2B21965C003463F7 /* Drinks.swift in Sources */,
 				4EC1D3902B2170C2003463F7 /* main.swift in Sources */,
-				4EC1D3982B218942003463F7 /* MainCategory.swift in Sources */,
+				4EC1D3982B218942003463F7 /* MenuCategory.swift in Sources */,
+				4EC1D39E2B222189003463F7 /* Orders.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
