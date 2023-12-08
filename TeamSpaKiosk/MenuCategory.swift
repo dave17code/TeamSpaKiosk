@@ -97,6 +97,7 @@ struct MenuCategory {
                         print("")
                     }
                 
+                // 6. Cancel
                 case "6":
                     
                     // 장바구니 비어 있음
