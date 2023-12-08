@@ -25,7 +25,8 @@ class Orders {
         }
         print("")
         print("[ Total ]")
-        print("W " + String(orderPrice.reduce(0, +)))
+        let total = orderPrice.reduce(0, +)
+        print("W " + String(format: "%.1f", total))
         print("")
         print("1. 주문  2. 메뉴판")
     }
