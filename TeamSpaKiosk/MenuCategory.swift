@@ -190,6 +190,7 @@ struct MenuCategory {
                     print("")
                 }
                 
+            // 3번 버거 선택
             case "3":
                 print("")
                 print(Burgers().menu[2].dropFirst(3))
@@ -219,6 +220,7 @@ struct MenuCategory {
                     print("")
                 }
                 
+            // 4번 버거 선택
             case "4":
                 print("")
                 print(Burgers().menu[3].dropFirst(3))
@@ -400,6 +402,6 @@ struct MenuCategory {
         
         // showMenuCategory() 재귀 호출
         showMenuCategory()
-       
+        
     }
 }
