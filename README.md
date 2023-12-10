@@ -1,6 +1,6 @@
 ### 스파르타 코딩클럽 내일배움캠프 🍎 iOS 트랙
 
-### 키오스크 과제 (== SHACK SHACK 🍔 BURGER ==)
+### 키오스크 과제 (쉑쉑버거 🍔)
 ---
 <img width="853" alt="1" src="https://github.com/dave17code/TeamSpaKiosk/assets/151927621/68ef9094-2391-4c8f-af2b-0c730e9b2a0e">
 <img width="796" alt="2" src="https://github.com/dave17code/TeamSpaKiosk/assets/151927621/f4e40887-4b59-47c7-860d-7d7983921e2c">
